@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snout/utils/measurements/uisizes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,10 +10,23 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    UiSizes().init(context);
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        body: Container(
+          width: UiSizes().width,
+          height: UiSizes().height,
+          color: Colors.teal,
+          child: const Center(
+            child: Text(
+              'Hello World!',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 32,
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ),
     );
