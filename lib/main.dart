@@ -13,16 +13,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     UiSizes().init(context);
-    const Color scaffoldColor = Color.fromARGB(255, 141, 37, 206);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          fontFamily: 'Metropolis', scaffoldBackgroundColor: scaffoldColor),
+          primaryColor: const Color.fromARGB(255, 141, 37, 206),
+          fontFamily: 'Metropolis',
+          scaffoldBackgroundColor: const Color.fromARGB(255, 243, 243, 243)),
       home: const AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle(
-            // systemNavigationBarColor: scaffoldColor,
-            // statusBarColor: scaffoldColor,
-            ),
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.dark,
+          systemNavigationBarIconBrightness: Brightness.dark,
+        ),
         child: SplashScreen(),
       ),
     );
