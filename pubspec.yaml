@@ -21,3 +21,20 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: Metropolis
+      fonts:
+        - asset: lib/assets/fonts/Metropolis-Light.otf
+          weight: 300
+        - asset: lib/assets/fonts/Metropolis-Regular.otf
+          weight: 400
+        - asset: lib/assets/fonts/Metropolis-Medium.otf
+          weight: 500
+        - asset: lib/assets/fonts/Metropolis-SemiBold.otf
+          weight: 600
+        - asset: lib/assets/fonts/Metropolis-Bold.otf
+          weight: 700
+        - asset: lib/assets/fonts/Metropolis-ExtraBold.otf
+          weight: 800
+
