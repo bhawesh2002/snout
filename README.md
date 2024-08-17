@@ -17,6 +17,10 @@ The Flutter project is organized into the following folders:
 
   - `assets`: Contains the images and other assets used in the project.
 
+  - `pages`: Contains various pages for the app
+    - `home_page.dart`: The home page of the app.
+    - `splash_screen.dart`: The splash screen of the app.
+
   - `utils`: Contains utility functions used throughout the project.
     - `measurements`: Contains the measurements used in the project.
       - `uisizes.dart`: Contains the UI sizes used in the project.
