@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snout/pages/home_page.dart';
 import 'package:snout/utils/measurements/uisizes.dart';
 
@@ -12,9 +13,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     UiSizes().init(context);
+    const Color scaffoldColor = Color.fromARGB(255, 37, 201, 206);
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Metropolis'),
-      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          fontFamily: 'Metropolis', scaffoldBackgroundColor: scaffoldColor),
+      home: const AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle(
+          systemNavigationBarColor: scaffoldColor,
+          statusBarColor: scaffoldColor,
+        ),
+        child: HomePage(),
+      ),
     );
   }
 }
