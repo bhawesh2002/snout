@@ -18,9 +18,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Align(
                     alignment: Alignment.topCenter,
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 12),
-                        child: SnoutAppbar()),
+                    child: SnoutAppbar(),
                   ),
                 ],
               ),

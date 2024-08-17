@@ -10,11 +10,14 @@ class SnoutAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const MetropolisText(
-          "SNOUT",
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: const MetropolisText(
+            "SNOUT",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         const Expanded(child: SizedBox()),
