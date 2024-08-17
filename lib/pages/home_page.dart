@@ -8,21 +8,22 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+        padding: EdgeInsets.only(
+            top: MediaQuery.of(context).padding.top,
+            right: 12,
+            left: 12,
+            bottom: 10),
         child: Placeholder(
-            color: Colors.grey.shade100,
-            child: const Padding(
-              padding:
-                  EdgeInsets.only(top: 18, bottom: 12, right: 12, left: 12),
-              child: Column(
-                children: [
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: SnoutAppbar(),
-                  ),
-                ],
+          color: Colors.grey.shade100,
+          child: const Column(
+            children: [
+              Align(
+                alignment: Alignment.topCenter,
+                child: SnoutAppbar(),
               ),
-            )),
+            ],
+          ),
+        ),
       ),
     );
   }
