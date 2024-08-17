@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snout/widgets/snout_appbar.dart';
+import 'package:snout/widgets/snout_text_field.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,10 +18,9 @@ class HomePage extends StatelessWidget {
           color: Colors.grey.shade100,
           child: const Column(
             children: [
-              Align(
-                alignment: Alignment.topCenter,
-                child: SnoutAppbar(),
-              ),
+              SnoutAppbar(),
+              SizedBox(height: 12),
+              SnoutTextField(),
             ],
           ),
         ),
