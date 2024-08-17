@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     UiSizes().init(context);
-    const Color scaffoldColor = Color.fromARGB(255, 37, 201, 206);
+    const Color scaffoldColor = Color.fromARGB(255, 141, 37, 206);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
