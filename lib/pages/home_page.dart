@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snout/widgets/pet_selection_mini.dart';
 import 'package:snout/widgets/snout_appbar.dart';
 import 'package:snout/widgets/snout_text_field.dart';
 
@@ -21,6 +22,8 @@ class HomePage extends StatelessWidget {
               SnoutAppbar(),
               SizedBox(height: 12),
               SnoutTextField(),
+              SizedBox(height: 32),
+              PetSelectionMini()
             ],
           ),
         ),
