@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snout/widgets/metropolis_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            const MetropolisText(
               'SNOUT',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -48,12 +49,8 @@ class HomePage extends StatelessWidget {
               ),
               child: const Padding(
                 padding: EdgeInsets.all(16.0),
-                child: Text(
+                child: MetropolisText(
                   "Start Shopping",
-                  textHeightBehavior: TextHeightBehavior(
-                    applyHeightToLastDescent: false,
-                    applyHeightToFirstAscent: true,
-                  ),
                   style: TextStyle(
                     fontSize: 24,
                     color: Colors.white,

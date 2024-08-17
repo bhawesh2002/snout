@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:snout/pages/home_page.dart';
 import 'package:snout/utils/measurements/uisizes.dart';
+import 'package:snout/widgets/metropolis_text.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -55,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen>
             height: UiSizes().height,
             decoration: BoxDecoration(color: _bgColor.value),
             child: Center(
-              child: Text(
+              child: MetropolisText(
                 "SNOUT",
                 style: TextStyle(
                   color: Colors.white,
