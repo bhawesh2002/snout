@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:snout/pages/home_page.dart';
+import 'package:snout/pages/splash_screen.dart';
 import 'package:snout/utils/measurements/uisizes.dart';
 
 void main() {
@@ -20,10 +20,10 @@ class MainApp extends StatelessWidget {
           fontFamily: 'Metropolis', scaffoldBackgroundColor: scaffoldColor),
       home: const AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle(
-          systemNavigationBarColor: scaffoldColor,
-          statusBarColor: scaffoldColor,
-        ),
-        child: HomePage(),
+            // systemNavigationBarColor: scaffoldColor,
+            // statusBarColor: scaffoldColor,
+            ),
+        child: SplashScreen(),
       ),
     );
   }
