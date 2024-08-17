@@ -4,6 +4,7 @@ import 'package:snout/pages/splash_screen.dart';
 import 'package:snout/utils/measurements/uisizes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainApp());
 }
 
