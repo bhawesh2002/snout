@@ -4,6 +4,7 @@ class SnoutIconButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback? onTap;
   final double? size;
+  final double? iconSize;
   final double? borderWidth;
   final double? borderRadius;
   final Color? borderColor;
@@ -22,7 +23,8 @@ class SnoutIconButton extends StatelessWidget {
       this.iconColor,
       this.shape = BoxShape.circle,
       this.borderRadius,
-      this.splashColor});
+      this.splashColor,
+      this.iconSize});
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +49,7 @@ class SnoutIconButton extends StatelessWidget {
         child: Icon(
           icon,
           color: iconColor ?? Colors.black,
+          size: iconSize ?? 22,
         ),
       ),
     );
