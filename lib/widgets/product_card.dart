@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snout/widgets/snout_icon_button.dart';
 
 class ProductCard extends StatelessWidget {
   final String? productName;
@@ -11,115 +10,89 @@ class ProductCard extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 213, 213, 213),
-        borderRadius: BorderRadius.circular(18),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          //Image of Product
-          SizedBox(
-            height: 180,
-            child: Stack(
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(
+              width: 2, color: const Color.fromARGB(255, 231, 231, 231))),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 150,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'lib/assets/images/product_package_1.png',
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Kennel Kitchen Wet Dog Food - Lamb Chunks in Gravy (Pack of 15 x 80g Pouches)',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(height: 4),
+            const Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.fill,
-                      colorFilter: ColorFilter.mode(
-                          Color.fromARGB(255, 182, 182, 182),
-                          BlendMode.saturation),
-                      image: AssetImage(
-                        'lib/assets/images/pet_food.png',
-                      ),
-                    ),
-                  ),
-                ),
-                const Positioned.fill(
-                  right: 8,
-                  top: 8,
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: CircleAvatar(
-                      radius: 16,
-                      backgroundColor: Color.fromARGB(255, 200, 200, 200),
-                      foregroundColor: Colors.white,
-                      child: Icon(
-                        Icons.pets,
-                        size: 16,
-                      ),
-                    ),
-                  ),
-                ),
+                Icon(Icons.star_border, size: 18),
+                SizedBox(width: 4),
+                Text(
+                  '4.2',
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
+                )
               ],
             ),
-          ),
-          //Seperation
-          const SizedBox(height: 8),
-          //Product Details
-          Flexible(
-            fit: FlexFit.loose,
-            child: Stack(
+            const SizedBox(height: 10),
+            const Row(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                const Positioned(
-                  right: 12,
-                  bottom: 12,
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: SnoutIconButton(
-                      icon: Icons.shopping_bag,
-                      shape: BoxShape.rectangle,
-                      borderWidth: 1,
-                      borderColor: Colors.black,
-                      borderRadius: 8,
-                      size: 8,
-                      iconSize: 18,
-                    ),
+                Text(
+                  '₹ 2,456',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.5,
                   ),
                 ),
-                Positioned(
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            productName ?? "Product Name",
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          const SizedBox(height: 2),
-                          const Text(
-                            "-20%",
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          Text(
-                            price ?? "\$\$\$",
-                            style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                SizedBox(width: 6),
+                Text(
+                  '₹3,124',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      decoration: TextDecoration.lineThrough,
+                      height: 1.5),
+                )
               ],
             ),
-          ),
-        ],
+            const SizedBox(height: 10),
+            Container(
+              decoration: BoxDecoration(
+                  color: const Color(0xffE5E5E5),
+                  borderRadius: BorderRadius.circular(6)),
+              child: const Center(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 12.0),
+                  child: Text(
+                    "ADD TO CART",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
