@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:snout/widgets/metropolis_text.dart';
+import 'package:snout/widgets/category_tile_long.dart';
 import 'package:snout/widgets/pet_selection_mini.dart';
 import 'package:snout/widgets/product_card.dart';
 import 'package:snout/widgets/snout_appbar.dart';
@@ -34,15 +34,9 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Column(
                     children: [
-                      const Align(
-                        alignment: Alignment.topLeft,
-                        child: MetropolisText(
-                          "Popular Products",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                      const CategoryTileLong(
+                        title: "Most Popular",
+                        subTitle: "Top selling products on Snout",
                       ),
                       const SizedBox(height: 24),
                       Expanded(
