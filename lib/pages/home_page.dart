@@ -48,6 +48,7 @@ class HomePage extends StatelessWidget {
                       Expanded(
                         child: MasonryGridView.builder(
                           shrinkWrap: true,
+                          padding: EdgeInsets.zero,
                           itemCount: 12,
                           mainAxisSpacing: 18,
                           crossAxisSpacing: 16,
