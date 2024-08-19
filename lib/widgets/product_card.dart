@@ -11,8 +11,7 @@ class ProductCard extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(
-              width: 2, color: const Color.fromARGB(255, 231, 231, 231))),
+          border: Border.all(width: 1, color: const Color(0xffEFEFEF))),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
