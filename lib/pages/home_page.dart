@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             const SnoutTextField(),
             // const SizedBox(height: 32),
             // const PetSelectionMini(),
-            const SizedBox(height: 32),
+            const SizedBox(height: 20),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
