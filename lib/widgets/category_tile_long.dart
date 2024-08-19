@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snout/utils/app_icons.dart';
 import 'package:snout/widgets/snout_icon_button.dart';
 
 class CategoryTileLong extends StatelessWidget {
@@ -41,7 +42,7 @@ class CategoryTileLong extends StatelessWidget {
         ),
         SnoutIconButton(
           onTap: onTap,
-          icon: Icons.arrow_forward,
+          icon: AppIcons.arrow,
           shape: BoxShape.rectangle,
           borderRadius: 12,
           bgColor: const Color(0xfff9f9f9),

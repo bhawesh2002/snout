@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snout/utils/app_icons.dart';
 
 class ProductCard extends StatelessWidget {
   final String? productName;
@@ -36,12 +37,12 @@ class ProductCard extends StatelessWidget {
               style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 4),
-            const Row(
+            Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.star_border, size: 18),
-                SizedBox(width: 4),
-                Text(
+                Icon(AppIcons.star, size: 18),
+                const SizedBox(width: 4),
+                const Text(
                   '4.2',
                   style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
                 )
