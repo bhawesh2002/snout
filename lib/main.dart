@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
           primaryColor: const Color.fromARGB(255, 141, 37, 206),
           fontFamily: 'Metropolis',
-          scaffoldBackgroundColor: const Color.fromARGB(255, 243, 243, 243)),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255)),
       home: const AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
