@@ -18,48 +18,45 @@ class HomePage extends StatelessWidget {
             right: 12,
             left: 12,
             bottom: 10),
-        child: Placeholder(
-          color: Colors.grey.shade100,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const SnoutAppbar(),
-              const SizedBox(height: 12),
-              const SnoutTextField(),
-              const SizedBox(height: 32),
-              const PetSelectionMini(),
-              const SizedBox(height: 32),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Column(
-                    children: [
-                      const CategoryTileLong(
-                        title: "Most Popular",
-                        subTitle: "Top selling products on Snout",
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SnoutAppbar(),
+            const SizedBox(height: 12),
+            const SnoutTextField(),
+            const SizedBox(height: 32),
+            const PetSelectionMini(),
+            const SizedBox(height: 32),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Column(
+                  children: [
+                    const CategoryTileLong(
+                      title: "Most Popular",
+                      subTitle: "Top selling products on Snout",
+                    ),
+                    const SizedBox(height: 24),
+                    Expanded(
+                      child: MasonryGridView.builder(
+                        shrinkWrap: true,
+                        padding: EdgeInsets.zero,
+                        itemCount: 12,
+                        mainAxisSpacing: 18,
+                        crossAxisSpacing: 16,
+                        gridDelegate:
+                            const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2),
+                        itemBuilder: (context, index) {
+                          return const ProductCard();
+                        },
                       ),
-                      const SizedBox(height: 24),
-                      Expanded(
-                        child: MasonryGridView.builder(
-                          shrinkWrap: true,
-                          padding: EdgeInsets.zero,
-                          itemCount: 12,
-                          mainAxisSpacing: 18,
-                          crossAxisSpacing: 16,
-                          gridDelegate:
-                              const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2),
-                          itemBuilder: (context, index) {
-                            return const ProductCard();
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
