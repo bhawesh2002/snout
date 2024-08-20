@@ -141,8 +141,8 @@ class ProductCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6)),
                   child: const Center(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 12.0),
-                      child: Text(
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                      child: MetropolisText(
                         "ADD TO CART",
                         style: TextStyle(
                           fontSize: 12,
