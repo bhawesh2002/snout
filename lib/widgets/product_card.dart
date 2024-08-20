@@ -20,19 +20,18 @@ class ProductCard extends StatelessWidget {
         children: [
           //Label Displaying Discount Percentage
           Positioned.fill(
-            child: Transform.rotate(
-              angle: math.pi / 4,
-              origin: const Offset(
-                  30, -100), //Calculated Value for lable Width of 120
-              child: Align(
-                alignment: Alignment.topRight,
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Transform.rotate(
+                angle: math.pi / 4,
+                origin: const Offset(5, 55),
                 child: Container(
                   height: 15,
                   width: 120, //set the width to 120
                   color: Colors.grey.shade800,
                   child: const Center(
                     child: MetropolisText(
-                      "10% Off",
+                      "10% OFF",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 8,
@@ -45,8 +44,8 @@ class ProductCard extends StatelessWidget {
           ),
           //Icon for displaying for which animal food is for
           Positioned.fill(
-            top: 5,
-            left: 5,
+            top: 8,
+            left: 8,
             child: Align(
               alignment: Alignment.topLeft,
               child: Container(
