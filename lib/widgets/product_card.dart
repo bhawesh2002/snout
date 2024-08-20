@@ -28,7 +28,17 @@ class ProductCard extends StatelessWidget {
                 child: Container(
                   height: 15,
                   width: 120, //set the width to 120
-                  color: Colors.grey.shade800,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade800,
+                    boxShadow: const [
+                      BoxShadow(
+                        blurRadius: 5,
+                        spreadRadius: 0.2,
+                        color: Color.fromARGB(255, 220, 220, 220),
+                        offset: Offset(0, 4),
+                      )
+                    ],
+                  ),
                   child: const Center(
                     child: MetropolisText(
                       "10% OFF",
