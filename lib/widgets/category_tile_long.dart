@@ -33,8 +33,8 @@ class CategoryTileLong extends StatelessWidget {
                 ? Text(
                     subTitle!,
                     style: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
                     ),
                   )
                 : const SizedBox(),
