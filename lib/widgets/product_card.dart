@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:snout/utils/app_icons.dart';
 import 'dart:math' as math;
-
+import 'package:snout/utils/app_icons.dart';
 import 'package:snout/widgets/metropolis_text.dart';
 
 class ProductCard extends StatelessWidget {
