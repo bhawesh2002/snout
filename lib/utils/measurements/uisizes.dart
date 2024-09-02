@@ -3,11 +3,16 @@ import 'package:flutter/material.dart';
 class UiSizes {
   static late double _width;
   static late double _height;
+  static late double _pixelRatio;
+  static late Orientation _orientation;
+  static late double _aspectRatio;
 
   void init(BuildContext context) {
     _width = MediaQuery.of(context).size.width;
     _height = MediaQuery.of(context).size.height;
-    debugPrint('UiSizes.init(): Height: $height, Width: $width');
+    _pixelRatio = MediaQuery.of(context).devicePixelRatio;
+    _orientation = MediaQuery.of(context).orientation;
+    _aspectRatio = MediaQuery.of(context).size.aspectRatio;
   }
 
   double relativeFont(double fontSize) {
@@ -16,6 +21,9 @@ class UiSizes {
 
   double get width => _width;
   double get height => _height;
+  double get pixelRatio => _pixelRatio;
+  Orientation get orientation => _orientation;
+  double get aspectRatio => _aspectRatio;
 
   //getters for width
   double get w1 => _width * 0.01;
@@ -124,4 +132,6 @@ class UiSizes {
   double get h95 => _height * 0.95;
   double get h96 => _height * 0.96;
   double get h98 => _height * 0.98;
+
+  double get h2w1 => h2 + w1;
 }
