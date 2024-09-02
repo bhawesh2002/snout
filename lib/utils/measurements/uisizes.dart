@@ -10,6 +10,10 @@ class UiSizes {
     debugPrint('UiSizes.init(): Height: $height, Width: $width');
   }
 
+  double relativeFont(double fontSize) {
+    return fontSize * (_width / 400);
+  }
+
   double get width => _width;
   double get height => _height;
 
