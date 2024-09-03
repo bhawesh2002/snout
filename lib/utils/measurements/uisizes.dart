@@ -8,11 +8,11 @@ class UiSizes {
   static late double _aspectRatio;
 
   void init(BuildContext context) {
-    _width = MediaQuery.of(context).size.width;
-    _height = MediaQuery.of(context).size.height;
-    _pixelRatio = MediaQuery.of(context).devicePixelRatio;
-    _orientation = MediaQuery.of(context).orientation;
-    _aspectRatio = MediaQuery.of(context).size.aspectRatio;
+    _width = MediaQuery.sizeOf(context).width;
+    _height = MediaQuery.sizeOf(context).height;
+    _pixelRatio = MediaQuery.devicePixelRatioOf(context);
+    _orientation = MediaQuery.orientationOf(context);
+    _aspectRatio = MediaQuery.sizeOf(context).aspectRatio;
   }
 
   double relativeFont(double fontSize) {
