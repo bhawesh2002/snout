@@ -13,6 +13,7 @@ class UiSizes {
     _pixelRatio = MediaQuery.devicePixelRatioOf(context);
     _orientation = MediaQuery.orientationOf(context);
     _aspectRatio = MediaQuery.sizeOf(context).aspectRatio;
+    debugPrint('UiSizes.init(): Height: $height, Width: $width');
   }
 
   double relativeFont(double fontSize) {
@@ -110,6 +111,7 @@ class UiSizes {
   double get h40 => _height * 0.4;
   double get h44 => _height * 0.42;
   double get h45 => _height * 0.45;
+  double get h46 => _height * 0.46;
   double get h48 => _height * 0.48;
   double get h50 => _height * 0.5;
   double get h54 => _height * 0.54;
