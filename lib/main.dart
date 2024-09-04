@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:snout/pages/splash_screen.dart';
+import 'package:snout/utils/measurements/uisizes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +16,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    UiSizes().init(context);
     return MaterialApp(
-      useInheritedMediaQuery: true,
+      // useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
