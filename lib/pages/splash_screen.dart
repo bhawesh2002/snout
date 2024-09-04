@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen>
   late AnimationController _animationController;
   late Animation<Color?> _bgColor;
   late Animation<double> _fontSize;
+  late Timer _timer;
   @override
   void initState() {
     _animationController = AnimationController(
@@ -33,15 +34,18 @@ class _SplashScreenState extends State<SplashScreen>
     _animationController.repeat(reverse: true);
     super.initState();
 
-    Timer(const Duration(seconds: 4), () {
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const HomePage()));
+    _timer = Timer(const Duration(seconds: 4), () {
+      if (mounted) {
+        Navigator.of(context, rootNavigator: true).pushReplacement(
+            MaterialPageRoute(builder: (context) => const HomePage()));
+      }
     });
   }
 
   @override
   void dispose() {
     _animationController.dispose();
+    _timer.cancel();
     super.dispose();
   }
 
