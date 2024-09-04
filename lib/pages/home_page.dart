@@ -24,7 +24,10 @@ class HomePage extends StatelessWidget {
           children: [
             const SnoutAppbar(),
             SizedBox(height: uiSizes.h1),
-            const SnoutTextField(),
+            SnoutTextField(
+              controller: TextEditingController(
+                  text: '(${uiSizes.width},${uiSizes.height})'),
+            ),
             SizedBox(height: uiSizes.h2w1),
             Expanded(
               child: Padding(
@@ -38,23 +41,17 @@ class HomePage extends StatelessWidget {
                         subTitle: "Top selling products on Snout",
                       ),
                       SizedBox(height: uiSizes.h2),
-                      MasonryGridView.builder(
-                        shrinkWrap: true,
-                        padding: EdgeInsets.zero,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 12,
-                        mainAxisSpacing: 18,
-                        crossAxisSpacing: 16,
-                        gridDelegate:
-                            SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: UiSizes().orientation ==
-                                        Orientation.landscape
-                                    ? 3
-                                    : 2),
-                        itemBuilder: (context, index) {
-                          return const ProductCard();
-                        },
-                      ),
+                      AlignedGridView.count(
+                          shrinkWrap: true,
+                          crossAxisCount: 2,
+                          itemCount: 12,
+                          physics: const NeverScrollableScrollPhysics(),
+                          padding: EdgeInsets.zero,
+                          crossAxisSpacing: 12,
+                          mainAxisSpacing: 12,
+                          itemBuilder: (context, index) {
+                            return const ProductCard();
+                          })
                     ],
                   ),
                 ),
